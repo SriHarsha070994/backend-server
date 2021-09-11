@@ -2,11 +2,12 @@ package com.stktr.stktrserver.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stktr.stktrserver.util.Constants;
-
+@CrossOrigin
 @RestController
 public class StktrApi {
 	@RequestMapping("/")
