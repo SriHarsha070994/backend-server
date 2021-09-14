@@ -19,7 +19,10 @@ spec:
     spec:
       containers:
       - image: harsha070994/stktrserver_harsha
-        name: stktrserver-harsha-j96fs
+        name: stktrserver-harsha-pkvt9
+        env:
+        - name: Name
+          value: "Harsha"
         resources: {}
 status: {}
 --- 
