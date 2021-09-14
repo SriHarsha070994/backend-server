@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: stktrserver-harsha
+  name: stktrserver-harsha
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stktrserver-harsha
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: stktrserver-harsha
+    spec:
+      containers:
+      - image: harsha070994/stktrserver_harsha
+        name: stktrserver-harsha-j96fs
+        resources: {}
+status: {}
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: stktrserver-harsha
+  name: stktrserver-harsha
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: stktrserver-harsha
+  type: ClusterIP
+status:
+  loadBalancer: {}
